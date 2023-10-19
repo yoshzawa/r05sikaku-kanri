@@ -11,6 +11,6 @@ dependencies {
 }
 
 war {
-    archiveName = 'my-servlet-app.war'
-    version = '1.0'
+    enabled = true
+    archiveFileName = "my-servlet-app.war"
 }
