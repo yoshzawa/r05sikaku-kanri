@@ -1,0 +1,28 @@
+ｊ<?xml version="1.0"?>
+<!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure.dtd">
+
+<Configure id="Server" class="org.eclipse.jetty.server.Server">
+
+  <!-- HTTPコネクターの設定 -->
+  <Set name="connectors">
+    <Array type="org.eclipse.jetty.server.ServerConnector">
+      <Item>
+        <New class="org.eclipse.jetty.server.ServerConnector">
+          <Arg><Ref refid="Server"/></Arg>
+          <Set name="port">8080</Set>
+        </New>
+      </Item>
+    </Array>
+  </Set>
+
+  <!-- コンテキストパスとWebアプリケーションの設定 -->
+  <Call name="addHandler">
+    <Arg>
+      <New class="org.eclipse.jetty.webapp.WebAppContext">
+        <Set name="contextPath">/</Set>
+        <Set name="war"><SystemProperty name="jetty.home" default="."/>/webapps/myapp.war</Set>
+      </New>
+    </Arg>
+  </Call>
+
+</Configure>
