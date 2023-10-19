@@ -12,4 +12,5 @@ dependencies {
 
 war {
     archiveName = 'my-servlet-app.war'
+    version = '1.0'
 }
