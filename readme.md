@@ -26,10 +26,10 @@ Webベースの資格試験管理システムを開発します。
 ## システム開発演習の概要
 
 1. Dockerfileをサーバーにコピーして、イメージを作成します。ソースのビルドも行います。
-docker build --progress=plain --no-cache -t sikaku-kanri .
+コマンドの例：'docker build --progress=plain --no-cache -t sikaku-kanri .'
 
 2. イメージを使用してプログラムを実行します。
-docker run -it -p 8080:8080 --name my-sikaku-kanri sikaku-kanri
+コマンドの例：'docker run -it -p 8080:8080 --name my-sikaku-kanri sikaku-kanri'
 
 3. ブラウザでサーバーにアクセスします。
 URLの例：[http://docker-server:8080/my-servlet-app/sikakuView.html](http://docker-server:8080/my-servlet-app/sikakuView.html)
