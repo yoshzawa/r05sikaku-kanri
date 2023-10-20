@@ -5,8 +5,6 @@ RUN ls -l /app/servlet-source
 COPY ./build.gradle /app/servlet-source/build.gradle
 RUN gradle -p servlet-source war
 
-
-
 #FROM jetty:latest
 FROM tomcat:9-jdk17
 USER root
