@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +9,9 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+<script src="md5.js" type="text/javascript"></script>
+
 </head>
 <body>
 
@@ -18,7 +23,7 @@
                     ログイン
                 </div>
                 <div class="card-body">
-                    <form>
+                    <form method=post action="./login">
                         <div class="mb-3">
                             <label for="username" class="form-label">ユーザー名</label>
                             <input type="text" class="form-control" id="username" name="username" required>
